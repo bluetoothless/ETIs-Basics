@@ -59,8 +59,9 @@ sysinfo.txt
 crashlytics-build.properties
 
 ETISBasics/UserSettings/EditorUserSettings.asset
-ETISBasics/UserSettings/Layouts
-ETISBasics/Temp
-ETISBasics/Logs
+ETISBasics/UserSettings/Layouts/
+ETISBasics/Temp/
+ETISBasics/Logs/
+ETISBasics/Library/
 
 
