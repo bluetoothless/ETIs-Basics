@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 308642}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation21
+  m_Name: NE-1_NotebookSpawnLocation10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,7 +152,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 308661548}
-  m_RootOrder: 21
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &12220283
 GameObject:
@@ -164,7 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 12220284}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation19
+  m_Name: NE-0_NotebookSpawnLocation2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -178,12 +178,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12220283}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7163.5, y: 267.6, z: 6388.8}
+  m_LocalPosition: {x: -7211, y: 269.8, z: 6436.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 308661548}
-  m_RootOrder: 19
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &28941111
 GameObject:
@@ -195,7 +195,7 @@ GameObject:
   m_Component:
   - component: {fileID: 28941112}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation6
+  m_Name: NE-1_NotebookSpawnLocation6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -226,7 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 69924453}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation0
+  m_Name: NE-0_NotebookSpawnLocation0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -299,7 +299,7 @@ Transform:
   - {fileID: 963194228}
   - {fileID: 1228112417}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &74761267
 MonoBehaviour:
@@ -314,13 +314,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 74761265}
-  speed: 400
+  speed: 600
   gravity: -627.84
   groundCheck: {fileID: 1228112417}
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
     m_Bits: 8
+--- !u!1 &84936396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 84936397}
+  m_Layer: 0
+  m_Name: EA-2_NotebookSpawnLocation34
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &84936397
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84936396}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3984.4, y: 874.2, z: 573.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 308661548}
+  m_RootOrder: 34
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &154326802
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,7 +448,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &159308489
 GameObject:
@@ -429,7 +460,7 @@ GameObject:
   m_Component:
   - component: {fileID: 159308490}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation3
+  m_Name: NE-1_NotebookSpawnLocation8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -448,7 +479,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 308661548}
-  m_RootOrder: 3
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &166616944
 GameObject:
@@ -460,7 +491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 166616945}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation18
+  m_Name: NE-0_NotebookSpawnLocation3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -474,12 +505,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 166616944}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7274.9, y: 331.9, z: 5045.5}
+  m_LocalPosition: {x: -7274.9, y: 362.3, z: 5045.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 308661548}
-  m_RootOrder: 18
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &178884641 stripped
 GameObject:
@@ -588,26 +619,26 @@ Transform:
   m_Children:
   - {fileID: 69924453}
   - {fileID: 1194990507}
-  - {fileID: 1146325235}
-  - {fileID: 159308490}
+  - {fileID: 12220284}
+  - {fileID: 166616945}
   - {fileID: 805838849}
   - {fileID: 1009252788}
   - {fileID: 28941112}
+  - {fileID: 1146325235}
+  - {fileID: 159308490}
+  - {fileID: 889372178}
+  - {fileID: 308642}
   - {fileID: 1049684988}
+  - {fileID: 2052587622}
   - {fileID: 1095351643}
   - {fileID: 2074657123}
   - {fileID: 2002328064}
   - {fileID: 1952540897}
-  - {fileID: 2052587622}
+  - {fileID: 1152868072}
   - {fileID: 854049630}
   - {fileID: 1289350216}
   - {fileID: 934748191}
   - {fileID: 1692762711}
-  - {fileID: 1152868072}
-  - {fileID: 166616945}
-  - {fileID: 12220284}
-  - {fileID: 889372178}
-  - {fileID: 308642}
   - {fileID: 1758172633}
   - {fileID: 1916436332}
   - {fileID: 1345475953}
@@ -616,8 +647,13 @@ Transform:
   - {fileID: 1933189640}
   - {fileID: 592807158}
   - {fileID: 485508855}
+  - {fileID: 2106019263}
+  - {fileID: 481261674}
+  - {fileID: 2012835643}
+  - {fileID: 1495728625}
+  - {fileID: 84936397}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &308661549
 MonoBehaviour:
@@ -634,26 +670,26 @@ MonoBehaviour:
   notebookSpawnLocations:
   - {fileID: 69924453}
   - {fileID: 1194990507}
-  - {fileID: 1146325235}
-  - {fileID: 159308490}
+  - {fileID: 12220284}
+  - {fileID: 166616945}
   - {fileID: 805838849}
   - {fileID: 1009252788}
   - {fileID: 28941112}
+  - {fileID: 1146325235}
+  - {fileID: 159308490}
+  - {fileID: 889372178}
+  - {fileID: 308642}
   - {fileID: 1049684988}
+  - {fileID: 2052587622}
   - {fileID: 1095351643}
   - {fileID: 2074657123}
   - {fileID: 2002328064}
   - {fileID: 1952540897}
-  - {fileID: 2052587622}
+  - {fileID: 1152868072}
   - {fileID: 854049630}
   - {fileID: 1289350216}
   - {fileID: 934748191}
   - {fileID: 1692762711}
-  - {fileID: 1152868072}
-  - {fileID: 166616945}
-  - {fileID: 12220284}
-  - {fileID: 889372178}
-  - {fileID: 308642}
   - {fileID: 1758172633}
   - {fileID: 1916436332}
   - {fileID: 1345475953}
@@ -662,6 +698,11 @@ MonoBehaviour:
   - {fileID: 1933189640}
   - {fileID: 592807158}
   - {fileID: 485508855}
+  - {fileID: 2106019263}
+  - {fileID: 481261674}
+  - {fileID: 2012835643}
+  - {fileID: 1495728625}
+  - {fileID: 84936397}
   notebookPrefab: {fileID: 1884156196641044, guid: 00931e932c93cef48ae2d8cc87408c66, type: 3}
   notebookClones: []
 --- !u!1 &320841576 stripped
@@ -740,6 +781,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8146833183894083588, guid: 52d8691bdd696d04788399ac9126e742, type: 3}
+--- !u!1 &481261673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 481261674}
+  m_Layer: 0
+  m_Name: EA-1_NotebookSpawnLocation31
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &481261674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481261673}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -5531.5, y: 561.4, z: 570.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 308661548}
+  m_RootOrder: 31
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &485508854
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,7 +822,7 @@ GameObject:
   m_Component:
   - component: {fileID: 485508855}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation29
+  m_Name: EA-1_NotebookSpawnLocation29
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -764,7 +836,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 485508854}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2598.9, y: 221, z: 767}
+  m_LocalPosition: {x: 2598.9, y: 561, z: 767}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -819,7 +891,7 @@ GameObject:
   m_Component:
   - component: {fileID: 511941989}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation25
+  m_Name: EA-0_NotebookSpawnLocation25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -888,7 +960,7 @@ GameObject:
   m_Component:
   - component: {fileID: 592807158}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation28
+  m_Name: EA-0_NotebookSpawnLocation28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1103,7 +1175,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &722213935 stripped
 GameObject:
@@ -1133,7 +1205,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 34bf6c01c01f37f4c9629c44d33e89ce, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 34bf6c01c01f37f4c9629c44d33e89ce, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1223,7 +1295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 805838849}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation4
+  m_Name: NE-1_NotebookSpawnLocation4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1254,7 +1326,7 @@ GameObject:
   m_Component:
   - component: {fileID: 854049630}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation13
+  m_Name: NE-3_NotebookSpawnLocation18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1273,7 +1345,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 308661548}
-  m_RootOrder: 13
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &889372177
 GameObject:
@@ -1285,7 +1357,7 @@ GameObject:
   m_Component:
   - component: {fileID: 889372178}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation20
+  m_Name: NE-1_NotebookSpawnLocation9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1304,7 +1376,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 308661548}
-  m_RootOrder: 20
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &934748190
 GameObject:
@@ -1316,7 +1388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 934748191}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation15
+  m_Name: NE-3_NotebookSpawnLocation20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1335,7 +1407,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 308661548}
-  m_RootOrder: 15
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -1434,7 +1506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0862c2390c2717848b95c3c12e2a6e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 700
+  mouseSensitivity: 900
   playerObject: {fileID: 74761266}
 --- !u!1 &1009252787
 GameObject:
@@ -1446,7 +1518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1009252788}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation5
+  m_Name: NE-1_NotebookSpawnLocation5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1477,7 +1549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1049684988}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation7
+  m_Name: NE-1_NotebookSpawnLocation11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1496,7 +1568,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 308661548}
-  m_RootOrder: 7
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1095351642
 GameObject:
@@ -1508,7 +1580,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1095351643}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation8
+  m_Name: NE-2_NotebookSpawnLocation13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1527,7 +1599,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 308661548}
-  m_RootOrder: 8
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1103991661 stripped
 GameObject:
@@ -1558,7 +1630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1146325235}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation2
+  m_Name: NE-1_NotebookSpawnLocation7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1577,7 +1649,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 308661548}
-  m_RootOrder: 2
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1152868071
 GameObject:
@@ -1589,7 +1661,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1152868072}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation17
+  m_Name: NE-3_NotebookSpawnLocation17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1620,7 +1692,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1194990507}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation1
+  m_Name: NE-0_NotebookSpawnLocation1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1682,7 +1754,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1289350216}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation14
+  m_Name: NE-3_NotebookSpawnLocation19
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1701,7 +1773,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 308661548}
-  m_RootOrder: 14
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1322498699 stripped
 GameObject:
@@ -1770,7 +1842,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1345475953}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation24
+  m_Name: EA-0_NotebookSpawnLocation24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1810,6 +1882,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7207913836126238516, guid: 52d8691bdd696d04788399ac9126e742, type: 3}
+--- !u!1 &1495728624
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1495728625}
+  m_Layer: 0
+  m_Name: EA-2_NotebookSpawnLocation33
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1495728625
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495728624}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -474.1, y: 874.2, z: 1498.4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 308661548}
+  m_RootOrder: 33
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1617160161 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3109108503837798130, guid: 34bf6c01c01f37f4c9629c44d33e89ce, type: 3}
@@ -1896,7 +1999,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1692762711}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation16
+  m_Name: NE-3_NotebookSpawnLocation21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1915,65 +2018,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 308661548}
-  m_RootOrder: 16
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1729528401
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1884156196641044, guid: 00931e932c93cef48ae2d8cc87408c66, type: 3}
-      propertyPath: m_Name
-      value: Notebook
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527064727974542, guid: 00931e932c93cef48ae2d8cc87408c66, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527064727974542, guid: 00931e932c93cef48ae2d8cc87408c66, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -6531
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527064727974542, guid: 00931e932c93cef48ae2d8cc87408c66, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 259
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527064727974542, guid: 00931e932c93cef48ae2d8cc87408c66, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 8498
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527064727974542, guid: 00931e932c93cef48ae2d8cc87408c66, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527064727974542, guid: 00931e932c93cef48ae2d8cc87408c66, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527064727974542, guid: 00931e932c93cef48ae2d8cc87408c66, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527064727974542, guid: 00931e932c93cef48ae2d8cc87408c66, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527064727974542, guid: 00931e932c93cef48ae2d8cc87408c66, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527064727974542, guid: 00931e932c93cef48ae2d8cc87408c66, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4527064727974542, guid: 00931e932c93cef48ae2d8cc87408c66, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 00931e932c93cef48ae2d8cc87408c66, type: 3}
 --- !u!1 &1758172632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1984,7 +2030,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1758172633}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation22
+  m_Name: EA-0_NotebookSpawnLocation22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2206,7 +2252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1839960154}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation26
+  m_Name: EA-0_NotebookSpawnLocation26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2275,7 +2321,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1916436332}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation23
+  m_Name: EA-0_NotebookSpawnLocation23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2325,7 +2371,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1933189640}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation27
+  m_Name: EA-0_NotebookSpawnLocation27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2356,7 +2402,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952540897}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation11
+  m_Name: NE-2_NotebookSpawnLocation16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2375,7 +2421,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 308661548}
-  m_RootOrder: 11
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2002328063
 GameObject:
@@ -2387,7 +2433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2002328064}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation10
+  m_Name: NE-2_NotebookSpawnLocation15
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2406,7 +2452,83 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 308661548}
-  m_RootOrder: 10
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2011386458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2011386459}
+  - component: {fileID: 2011386460}
+  m_Layer: 0
+  m_Name: EnvControllerObj
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2011386459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011386458}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2011386460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2011386458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 374362a3465e4ef499708a591dfa51a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spinSpeed: 100
+--- !u!1 &2012835642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2012835643}
+  m_Layer: 0
+  m_Name: EA-2_NotebookSpawnLocation32
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2012835643
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012835642}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3508.4, y: 874.2, z: 629.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 308661548}
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2027463616 stripped
 GameObject:
@@ -2437,7 +2559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2052587622}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation12
+  m_Name: NE-2_NotebookSpawnLocation12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2487,7 +2609,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2074657123}
   m_Layer: 0
-  m_Name: NotebookSpawnLocation9
+  m_Name: NE-2_NotebookSpawnLocation14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2506,5 +2628,36 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 308661548}
-  m_RootOrder: 9
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2106019262
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2106019263}
+  m_Layer: 0
+  m_Name: EA-1_NotebookSpawnLocation30
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2106019263
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106019262}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -3421.9, y: 561.4, z: 1471}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 308661548}
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
