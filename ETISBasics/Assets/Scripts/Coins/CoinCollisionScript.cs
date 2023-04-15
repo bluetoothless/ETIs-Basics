@@ -12,21 +12,17 @@ public class CoinCollisionScript : MonoBehaviour
             EnvController.NumberOfPosessedCoins++;
             EnvController.NumberOfCoins--;
 
+            EnvController.CoinLocations = EnvController.CoinLocations
+                .Where(location => location != gameObject.transform.position)
+                .ToArray();
+
             EnvController.Coins = EnvController.Coins
                 .Where(coin => coin.transform.position != gameObject.transform.position)
                 .ToArray();
+            var ss = EnvController.Coins.Select(coin => coin.transform.position).ToArray();
 
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            //Destroy(gameObject);
         }
     }
-
-    /*private void OnTriggerStay(Collider other)
-    {
-        OnTriggerEnter(other);
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        
-    }*/
 }

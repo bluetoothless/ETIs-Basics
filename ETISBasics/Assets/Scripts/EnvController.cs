@@ -13,4 +13,5 @@ static class EnvController
 
     public static int NumberOfPosessedNotebooks = 0;
     public static int NumberOfPosessedCoins = 0;
+    public static bool GamePaused = false;
 }

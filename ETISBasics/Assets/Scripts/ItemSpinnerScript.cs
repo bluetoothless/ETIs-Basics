@@ -10,7 +10,7 @@ public class ItemSpinnerScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (EnvController.Notebooks != null)
+        if (EnvController.Notebooks != null && !EnvController.GamePaused)
         {
             if (!locationsSaved)
             {
@@ -36,12 +36,12 @@ public class ItemSpinnerScript : MonoBehaviour
             }
         }
 
-        if (EnvController.Coins != null)
+        if (EnvController.Coins != null && !EnvController.GamePaused)
         {
             int i = 0;
             foreach (GameObject coin in EnvController.Coins)
             {
-                coin.transform.RotateAround(EnvController.CoinLocations[i], Vector3.up, SpinSpeed * Time.fixedDeltaTime);
+                coin.transform.RotateAround(coin.transform.position, Vector3.up, SpinSpeed * Time.fixedDeltaTime);
                 i++;
             }
         }

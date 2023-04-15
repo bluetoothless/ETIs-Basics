@@ -5,18 +5,35 @@ using UnityEngine;
 
 public class NotebookCollisionScript : MonoBehaviour
 {
-    /*void OnTriggerEnter(Collider collider)
+    void OnTriggerEnter(Collider collider)
     {
         if (collider.tag == "Player")
         {
-            EnvController.NumberOfPosessedCoins++;
-            EnvController.NumberOfCoins--;
+            var envControllerObj = GameObject.FindGameObjectWithTag("GameController");
+            envControllerObj.gameObject.GetComponent<NotebookQuestionScript>().ManageNotebookCollision();
 
-            EnvController.Coins = EnvController.Coins
-                .Where(coin => coin.transform.position != gameObject.transform.position)
-                .ToArray();
-
-            Destroy(gameObject);
+            PickUpNotebook();
         }
-    }*/
+    }
+
+    private bool AskQuestion()
+    {
+        return false;
+    }
+
+    private void PickUpNotebook()
+    {
+        EnvController.NumberOfPosessedNotebooks++;
+
+        EnvController.NotebookLocations = EnvController.NotebookLocations
+            .Where(location => location != gameObject.transform.position)
+            .ToArray();
+
+        EnvController.Notebooks = EnvController.Notebooks
+            .Where(notebook => notebook.transform.position != gameObject.transform.position)
+            .ToArray();
+
+        gameObject.SetActive(false);
+        //Destroy(gameObject);
+    }
 }

@@ -18,21 +18,24 @@ public class PlayerMovementScript : MonoBehaviour
 
     void Update()
     {
-        isGounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
-
-        if (isGounded && velocity.y < 0)
+        if (!EnvController.GamePaused)
         {
-            velocity.y = -2f;
+            isGounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+            if (isGounded && velocity.y < 0)
+            {
+                velocity.y = -2f;
+            }
+
+            float x = Input.GetAxis("Horizontal");
+            float z = Input.GetAxis("Vertical");
+
+            Vector3 movementVector = transform.right * x + transform.forward * z;
+
+            controller.Move(movementVector * speed * Time.deltaTime);
+
+            velocity.y += gravity * Time.deltaTime;
+            controller.Move(velocity * Time.deltaTime);
         }
-
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
-
-        Vector3 movementVector = transform.right * x + transform.forward * z;
-        
-        controller.Move(movementVector * speed * Time.deltaTime);
-
-        velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
     }
 }

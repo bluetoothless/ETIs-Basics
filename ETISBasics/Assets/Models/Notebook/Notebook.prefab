@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 33799047194329006}
   - component: {fileID: 23515938872195488}
   - component: {fileID: 2894337546814162617}
+  - component: {fileID: 921556911173629460}
   m_Layer: 0
   m_Name: Notebook
   m_TagString: Notebook
@@ -265,3 +266,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 30, y: 3, z: 44}
   m_Center: {x: -15, y: 0, z: 0}
+--- !u!114 &921556911173629460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884156196641044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c47e6426ca3776e4e808da100f77616d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GamePanel: {fileID: 0}
+  NotebookQuestionPanel: {fileID: 0}
