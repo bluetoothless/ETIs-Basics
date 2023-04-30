@@ -19,7 +19,7 @@ public class NotebookQuestionScript : MonoBehaviour
 
     private void AskQuestion()
     {
-        //OnCorrectAnswer();
+        OnCorrectAnswer();
     }
 
     private void OnCorrectAnswer()

@@ -30,8 +30,8 @@ public class ItemSpinnerScript : MonoBehaviour
             int j = 0;
             foreach (GameObject notebook in EnvController.Notebooks)
             {
-                //notebook.transform.Rotate(0, spinSpeed * Time.fixedDeltaTime, 0, Space.World);
                 notebook.transform.RotateAround(EnvController.NotebookLocations[j] - new Vector3(14.2934f, 0, 0), Vector3.up, SpinSpeed * Time.fixedDeltaTime);
+                //notebook.transform.RotateAround(notebook.transform.position, Vector3.up, SpinSpeed * Time.fixedDeltaTime);
                 j++;
             }
         }

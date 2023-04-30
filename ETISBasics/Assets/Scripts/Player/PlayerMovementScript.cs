@@ -32,6 +32,11 @@ public class PlayerMovementScript : MonoBehaviour
 
             Vector3 movementVector = transform.right * x + transform.forward * z;
 
+            if (x != 0 || z != 0)
+            {
+                int a = 5;
+            }
+
             controller.Move(movementVector * speed * Time.deltaTime);
 
             velocity.y += gravity * Time.deltaTime;
