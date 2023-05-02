@@ -10,21 +10,11 @@ public class ItemSpinnerScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (EnvController.Notebooks != null && !EnvController.GamePaused)
+        if (!EnvController.GamePaused && EnvController.Notebooks != null && EnvController.Notebooks[0] != null)
         {
             if (!locationsSaved)
             {
-                EnvController.NotebookLocations = new Vector3[EnvController.NumberOfNotebooks];
-                for (int i = 0; i < EnvController.NumberOfNotebooks; i++)
-                {
-                    EnvController.NotebookLocations[i] = EnvController.Notebooks[i].transform.position;
-                }
-                EnvController.CoinLocations = new Vector3[EnvController.NumberOfCoins];
-                for (int i = 0; i < EnvController.NumberOfCoins; i++)
-                {
-                    EnvController.CoinLocations[i] = EnvController.Coins[i].transform.position;
-                }
-                locationsSaved = true;
+                SaveEntityLocations();
             }
 
             int j = 0;
@@ -45,5 +35,20 @@ public class ItemSpinnerScript : MonoBehaviour
                 i++;
             }
         }
+    }
+
+    private void SaveEntityLocations()
+    {
+        EnvController.NotebookLocations = new Vector3[EnvController.NumberOfNotebooks];
+        for (int i = 0; i < EnvController.NumberOfNotebooks; i++)
+        {
+            EnvController.NotebookLocations[i] = EnvController.Notebooks[i].transform.position;
+        }
+        EnvController.CoinLocations = new Vector3[EnvController.NumberOfCoins];
+        for (int i = 0; i < EnvController.NumberOfCoins; i++)
+        {
+            EnvController.CoinLocations[i] = EnvController.Coins[i].transform.position;
+        }
+        locationsSaved = true;
     }
 }

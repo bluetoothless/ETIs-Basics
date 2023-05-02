@@ -19,7 +19,7 @@ public class EnemyMovementScript : MonoBehaviour
 
     void Update()
     {
-        if (!EnvController.GamePaused)
+        if (!EnvController.GamePaused && EnvController.Enemies != null && EnvController.Enemies[EnvController.Enemies.Length - 1] != null)
         {
             isGounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
