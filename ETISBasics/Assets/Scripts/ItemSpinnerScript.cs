@@ -10,28 +10,18 @@ public class ItemSpinnerScript : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (EnvController.Notebooks != null && !EnvController.GamePaused)
+        if (!EnvController.GamePaused && EnvController.Notebooks != null && EnvController.Notebooks[0] != null)
         {
             if (!locationsSaved)
             {
-                EnvController.NotebookLocations = new Vector3[EnvController.NumberOfNotebooks];
-                for (int i = 0; i < EnvController.NumberOfNotebooks; i++)
-                {
-                    EnvController.NotebookLocations[i] = EnvController.Notebooks[i].transform.position;
-                }
-                EnvController.CoinLocations = new Vector3[EnvController.NumberOfCoins];
-                for (int i = 0; i < EnvController.NumberOfCoins; i++)
-                {
-                    EnvController.CoinLocations[i] = EnvController.Coins[i].transform.position;
-                }
-                locationsSaved = true;
+                SaveEntityLocations();
             }
 
             int j = 0;
             foreach (GameObject notebook in EnvController.Notebooks)
             {
-                //notebook.transform.Rotate(0, spinSpeed * Time.fixedDeltaTime, 0, Space.World);
                 notebook.transform.RotateAround(EnvController.NotebookLocations[j] - new Vector3(14.2934f, 0, 0), Vector3.up, SpinSpeed * Time.fixedDeltaTime);
+                //notebook.transform.RotateAround(notebook.transform.position, Vector3.up, SpinSpeed * Time.fixedDeltaTime);
                 j++;
             }
         }
@@ -45,5 +35,20 @@ public class ItemSpinnerScript : MonoBehaviour
                 i++;
             }
         }
+    }
+
+    private void SaveEntityLocations()
+    {
+        EnvController.NotebookLocations = new Vector3[EnvController.NumberOfNotebooks];
+        for (int i = 0; i < EnvController.NumberOfNotebooks; i++)
+        {
+            EnvController.NotebookLocations[i] = EnvController.Notebooks[i].transform.position;
+        }
+        EnvController.CoinLocations = new Vector3[EnvController.NumberOfCoins];
+        for (int i = 0; i < EnvController.NumberOfCoins; i++)
+        {
+            EnvController.CoinLocations[i] = EnvController.Coins[i].transform.position;
+        }
+        locationsSaved = true;
     }
 }

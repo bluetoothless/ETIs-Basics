@@ -33,7 +33,6 @@ public class PlayerMovementScript : MonoBehaviour
             Vector3 movementVector = transform.right * x + transform.forward * z;
 
             controller.Move(movementVector * speed * Time.deltaTime);
-
             velocity.y += gravity * Time.deltaTime;
             controller.Move(velocity * Time.deltaTime);
         }

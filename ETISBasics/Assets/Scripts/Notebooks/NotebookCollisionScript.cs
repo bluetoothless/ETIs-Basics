@@ -24,16 +24,23 @@ public class NotebookCollisionScript : MonoBehaviour
     private void PickUpNotebook()
     {
         EnvController.NumberOfPosessedNotebooks++;
-
         EnvController.NotebookLocations = EnvController.NotebookLocations
-            .Where(location => location != gameObject.transform.position)
+            .Where(location => IsNotAroundTheSameLocation(location, gameObject.transform.position))
             .ToArray();
 
         EnvController.Notebooks = EnvController.Notebooks
-            .Where(notebook => notebook.transform.position != gameObject.transform.position)
+        .Where(notebook => IsNotAroundTheSameLocation(notebook.transform.position, gameObject.transform.position))
             .ToArray();
 
         gameObject.SetActive(false);
         //Destroy(gameObject);
+    }
+    private bool IsNotAroundTheSameLocation(Vector3 location, Vector3 currentLocation)
+    {
+        var approxVectorX = new Vector3(30f, 0f, 0f);
+        var approxVectorZ = new Vector3(0f, 0f, 30f);
+        var isAround = (location - approxVectorX).x  <= currentLocation.x && (location + approxVectorX).x >= currentLocation.x
+            && (location - approxVectorZ).z <= currentLocation.z && (location + approxVectorZ).z >= currentLocation.z;
+        return !isAround;
     }
 }

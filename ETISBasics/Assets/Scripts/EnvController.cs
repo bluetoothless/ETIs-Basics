@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.TextCore.Text;
 using UnityEngine;
 
 static class EnvController
@@ -13,5 +14,24 @@ static class EnvController
 
     public static int NumberOfPosessedNotebooks = 0;
     public static int NumberOfPosessedCoins = 0;
+    public static int LivesLeft = 3;
     public static bool GamePaused = false;
+
+    public static int NumberOfEnemies = 15;
+    public static GameObject[] Enemies;
+    public static float EnemySpeed = 100;
+
+    public static void EndTheGame(bool win)
+    {
+        GamePaused = true;
+
+        if (win)
+        {
+            //
+        }
+        else
+        {
+
+        }
+    }
 }
