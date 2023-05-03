@@ -5,7 +5,8 @@ using UnityEngine;
 public class Notebook : MonoBehaviour
 {
     public GameObject[] NotebookQuestionPanel;
-    public int whichQuestion = 0;
+    public GameObject WrongAnswer;
+    public GameObject NotEnoughCoinsForHint;
 
     void Start()
     {
@@ -15,7 +16,9 @@ public class Notebook : MonoBehaviour
             for (int i = 0; i < NotebookQuestionPanel.Length; i++)
                 NotebookQuestionPanel[i].SetActive(false);
         }
-        whichQuestion++;
+
+        WrongAnswer.SetActive(false);
+        NotEnoughCoinsForHint.SetActive(false);
     }
 
 }

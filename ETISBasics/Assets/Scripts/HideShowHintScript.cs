@@ -6,6 +6,7 @@ using UnityEngine;
 public class HideShowHintScript : MonoBehaviour
 {
     public GameObject NotebookHintPanel;
+    public GameObject NotEnoughCoinsForHint;
 
     void Start()
     {
@@ -22,7 +23,7 @@ public class HideShowHintScript : MonoBehaviour
         }
             
         else
-            Debug.Log("Nie masz wystarczajacej ilosci monet, aby wykupiæ podpowiedz. Koszt podpowiedzi to 2 monety");
+            NotEnoughCoinsForHint.SetActive(true);
     }
 
     public void HideHint()

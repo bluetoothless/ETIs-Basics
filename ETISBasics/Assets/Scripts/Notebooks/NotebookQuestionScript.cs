@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class NotebookQuestionScript : MonoBehaviour
 {
     public GameObject GamePanel;
+    public GameObject WrongAnswer;
+    public Button ButtonBackToQuestion;
     public GameObject[] NotebookQuestionPanel;
     public int whichQuestion = 0;
 
@@ -15,12 +17,9 @@ public class NotebookQuestionScript : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.None;
         GamePanel.SetActive(false);
+        WrongAnswer.SetActive(false);
 
-        for (int i = 0; i < NotebookQuestionPanel.Length; i++)
-        {
-            if (whichQuestion == i)
-                NotebookQuestionPanel[i].SetActive(true);
-        }
+        NotebookQuestionPanel[whichQuestion].SetActive(true);
 
         whichQuestion++;
         EnvController.GamePaused = true;
@@ -29,15 +28,16 @@ public class NotebookQuestionScript : MonoBehaviour
 
     public void OnWrongAnswer()
     {
-        Debug.Log("Niepoprawna odpowiedz! Wrog przyspiesza!");
+        WrongAnswer.SetActive(true);
     }
 
 
     public void OnCorrectAnswer()
     {
+
         for (int i = 0; i < NotebookQuestionPanel.Length; i++)
             NotebookQuestionPanel[i].SetActive(false);
-
+        
         GamePanel.SetActive(true);
         EnvController.GamePaused = false;
         Cursor.lockState = CursorLockMode.Locked;
