@@ -7,38 +7,39 @@ using UnityEngine.UI;
 public class NotebookQuestionScript : MonoBehaviour
 {
     public GameObject GamePanel;
-    public GameObject NotebookQuestionPanel;
-    public Button CorrectAnswer;
-    public Button WrongAnswer1;
-    public Button WrongAnswer2;
-    public Button WrongAnswer3;
+    public GameObject[] NotebookQuestionPanel;
+    public int whichQuestion = 0;
+
 
     public void ManageNotebookCollision()
     {
+        Cursor.lockState = CursorLockMode.None;
         GamePanel.SetActive(false);
-        NotebookQuestionPanel.SetActive(true);
+
+        for (int i = 0; i < NotebookQuestionPanel.Length; i++)
+        {
+            if (whichQuestion == i)
+                NotebookQuestionPanel[i].SetActive(true);
+        }
+
+        whichQuestion++;
         EnvController.GamePaused = true;
-        AskQuestion();
     }
 
-    private void AskQuestion()
-    {
-        CorrectAnswer.onClick.AddListener(OnCorrectAnswer);
-        WrongAnswer1.onClick.AddListener(OnWrongAnswer);
-        WrongAnswer2.onClick.AddListener(OnWrongAnswer);
-        WrongAnswer3.onClick.AddListener(OnWrongAnswer);
-    }
 
-    private void OnWrongAnswer()
+    public void OnWrongAnswer()
     {
         Debug.Log("Niepoprawna odpowiedz! Wrog przyspiesza!");
-        AskQuestion();
     }
 
-    private void OnCorrectAnswer()
+
+    public void OnCorrectAnswer()
     {
+        for (int i = 0; i < NotebookQuestionPanel.Length; i++)
+            NotebookQuestionPanel[i].SetActive(false);
+
         GamePanel.SetActive(true);
-        NotebookQuestionPanel.SetActive(false);
         EnvController.GamePaused = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

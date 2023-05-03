@@ -11,6 +11,7 @@ public class MainMenuScript : MonoBehaviour
 
     private void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
         Options.onClick.AddListener(OnOptions);
         Quit.onClick.AddListener(OnQuit);
     }

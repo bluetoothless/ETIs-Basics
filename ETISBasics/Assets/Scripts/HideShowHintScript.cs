@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class HideShowHintScript : MonoBehaviour
 {
-
     public GameObject NotebookHintPanel;
-    public GameObject NotebookQuestionPanel;
+
+    void Start()
+    {
+        if (EnvController.GamePaused == false)
+            NotebookHintPanel.SetActive(false);
+    }
 
     public void ShowHint()
     {
         NotebookHintPanel.SetActive(true);
-        NotebookQuestionPanel.SetActive(false);
     }
 
     public void HideHint()
     {
         NotebookHintPanel.SetActive(false);
-        NotebookQuestionPanel.SetActive(true);
     }
 }
