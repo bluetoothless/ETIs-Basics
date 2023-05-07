@@ -979,9 +979,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HeartsTaken:
-  - {fileID: 1918465895}
-  - {fileID: 1806827161}
-  - {fileID: 416360617}
+  - {fileID: 1453480540}
+  - {fileID: 975129203}
+  - {fileID: 1350240590}
 --- !u!1 &84936396
 GameObject:
   m_ObjectHideFlags: 0
@@ -13695,7 +13695,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
