@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using EnvControllerNamespace;
 
 public class NotebookQuestionScript : MonoBehaviour
 {

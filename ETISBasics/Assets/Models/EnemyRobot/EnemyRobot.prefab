@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 5672757993265815879}
   - component: {fileID: 447384426351288932}
   - component: {fileID: 4756444632808084695}
-  - component: {fileID: 1015497911581989550}
   - component: {fileID: 972506466081257605}
+  - component: {fileID: 5860670088604463430}
   m_Layer: 0
   m_Name: EnemyRobot
   m_TagString: Enemy
@@ -74,18 +74,6 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 0
---- !u!114 &1015497911581989550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5008161989256018817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6957800491ed7fc4da8fc67987cd58ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &972506466081257605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -99,6 +87,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 60, y: 180, z: 60}
   m_Center: {x: 0, y: 90, z: 0}
+--- !u!114 &5860670088604463430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5008161989256018817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67bc1828287330844bd808c53ad7cd90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentState: 0
+  PlayerInAggroCollider: 0
+  PlayerInSight: 0
+  CollisionWithPlayer: 0
 --- !u!1 &8132653157586296993
 GameObject:
   m_ObjectHideFlags: 0
