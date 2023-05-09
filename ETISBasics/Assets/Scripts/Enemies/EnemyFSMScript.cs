@@ -17,8 +17,17 @@ public class EnemyFSMScript : MonoBehaviour
     private float EnemyCooldownTime = 10;
     private float IdleStateTime = 0;
 
+    private float MinTimeInAlertState = 5;
+    private float CurrentTimeInAlertState = 0;
+
+    private void Start()
+    {
+        PlayerInAggroCollider = true;
+    }
+
     void FixedUpdate()
     {
+        //change state if needed
         switch (CurrentState)
         {
             case EnemyState.Patrol:
@@ -36,10 +45,18 @@ public class EnemyFSMScript : MonoBehaviour
                 {
                     CurrentState = EnemyState.Chase;
                 }
-                else if (!PlayerInAggroCollider && !PlayerInSight)
+                else if (CurrentTimeInAlertState < MinTimeInAlertState)
                 {
-                    CurrentState = EnemyState.Patrol;
+                    CurrentTimeInAlertState += Time.deltaTime;
                 }
+                else
+                {
+                    if (!PlayerInAggroCollider && !PlayerInSight)
+                    {
+                        CurrentState = EnemyState.Patrol;
+                    }
+                    CurrentTimeInAlertState = 0;
+                } 
                 break;
             case EnemyState.Chase:
                 if (CollisionWithPlayer)

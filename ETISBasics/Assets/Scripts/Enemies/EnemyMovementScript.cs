@@ -15,11 +15,17 @@ public class EnemyMovementScript : MonoBehaviour
 
     Vector3 velocity;
     bool isGounded;
-
-    float PatrolTimeCounter = 0;
-    float PatrolTimeLength = 2;
     float x = 0.2f;
     float z = 1f;
+
+    //patrol state
+    float PatrolTimeCounter = 0;
+    float PatrolTimeLength = 2;
+
+    //alert state
+    private float rotationSpeed = 100f;
+    private bool rotateRight = false;
+
 
     void FixedUpdate()
     {
@@ -41,9 +47,10 @@ public class EnemyMovementScript : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0f, rotationAngle, 0f);
 
                 controller.Move(movementVector * EnvController.EnemySpeed * Time.deltaTime);
-                velocity.y += gravity * Time.deltaTime;
-                controller.Move(velocity * Time.deltaTime);
+                
             }
+            velocity.y += gravity * Time.deltaTime;
+            controller.Move(velocity * Time.deltaTime);
         }
     }
 
@@ -66,7 +73,7 @@ public class EnemyMovementScript : MonoBehaviour
 
     Vector3 CalculateForPatrolState()
     {
-        //TODO dorobiæ sprawdzenie, czy enemy jest w odleg³oœci X od EnemyStartLocation, jeœli jest daleko, to wróæ tam
+        //TODO (mo¿e) dorobiæ sprawdzenie, czy enemy jest w odleg³oœci X od EnemyStartLocation, jeœli jest daleko, to wróæ tam
         PatrolTimeCounter += Time.deltaTime;
 
         if (PatrolTimeCounter >= PatrolTimeLength * 2)
@@ -85,8 +92,8 @@ public class EnemyMovementScript : MonoBehaviour
 
     Vector3 CalculateForAlertState()
     {
-        Vector3 movementVector = new Vector3(x, 0f, z);
-        return movementVector;
+        RotateForAlertState();
+        return new Vector3(0f, 0f, 0f);
     }
 
     Vector3 CalculateForChaseState()
@@ -99,5 +106,25 @@ public class EnemyMovementScript : MonoBehaviour
     {
         Vector3 movementVector = new Vector3(x, 0f, z);
         return movementVector;
+    }
+
+    void RotateForAlertState()
+    {
+        // Calculate the amount of rotation for this frame
+        float rotationAmount = Time.deltaTime * rotationSpeed;
+
+        // Determine the direction to rotate
+        int rotationDirection = rotateRight ? 1 : -1;
+
+        // Rotate the object by the specified amount and direction
+        transform.Rotate(0f, rotationAmount * rotationDirection, 0f);
+
+        // Check if we've completed a full 180 degree rotation
+        var range = Mathf.Abs(transform.rotation.eulerAngles.y) % 180;
+        if (range >= -5 && range <= 5)
+        {
+            // Switch the rotation direction
+            rotateRight = !rotateRight;
+        }
     }
 }
