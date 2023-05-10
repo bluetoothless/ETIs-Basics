@@ -23,9 +23,15 @@ public class EnemyMovementScript : MonoBehaviour
     float PatrolTimeLength = 2;
 
     //alert state
-    private float rotationSpeed = 100f;
-    private bool rotateRight = false;
+    private float RotationSpeed = 100f;
+    private bool RotateRight = false;
+    private float MaxRotationAngle = 181f;
+    private float OriginalRotationAngle;
 
+    private void Start()
+    {
+        OriginalRotationAngle = transform.rotation.eulerAngles.y;
+    }
 
     void FixedUpdate()
     {
@@ -45,9 +51,9 @@ public class EnemyMovementScript : MonoBehaviour
             {
                 var rotationAngle = Mathf.Atan2(movementVector.x, movementVector.z) * Mathf.Rad2Deg;
                 transform.rotation = Quaternion.Euler(0f, rotationAngle, 0f);
+                OriginalRotationAngle = transform.rotation.eulerAngles.y;
 
                 controller.Move(movementVector * EnvController.EnemySpeed * Time.deltaTime);
-                
             }
             velocity.y += gravity * Time.deltaTime;
             controller.Move(velocity * Time.deltaTime);
@@ -110,21 +116,19 @@ public class EnemyMovementScript : MonoBehaviour
 
     void RotateForAlertState()
     {
-        // Calculate the amount of rotation for this frame
-        float rotationAmount = Time.deltaTime * rotationSpeed;
+        var rotationAmount = Time.deltaTime * RotationSpeed;
+        var rotationDirection = RotateRight ? 1 : -1;
+        var currentAngle = transform.rotation.eulerAngles.y;
+        var maxLeftAngle = OriginalRotationAngle + (MaxRotationAngle / 2);
+        maxLeftAngle = maxLeftAngle >= 360f ? maxLeftAngle - 360 : maxLeftAngle;
+        var maxRightAngle = maxLeftAngle - MaxRotationAngle;
+        maxRightAngle = maxRightAngle < 0f ? maxRightAngle + 360 : maxRightAngle;
 
-        // Determine the direction to rotate
-        int rotationDirection = rotateRight ? 1 : -1;
-
-        // Rotate the object by the specified amount and direction
         transform.Rotate(0f, rotationAmount * rotationDirection, 0f);
-
-        // Check if we've completed a full 180 degree rotation
-        var range = Mathf.Abs(transform.rotation.eulerAngles.y) % 180;
-        if (range >= -5 && range <= 5)
+        if ((RotateRight && currentAngle >= maxLeftAngle - 1 && currentAngle <= maxLeftAngle + 1)
+            || (!RotateRight && currentAngle >= maxRightAngle - 1 && currentAngle <= maxRightAngle + 1))
         {
-            // Switch the rotation direction
-            rotateRight = !rotateRight;
+            RotateRight = !RotateRight;
         }
     }
 }
