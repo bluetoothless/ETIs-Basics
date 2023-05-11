@@ -1,5 +1,63 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3621403390328359503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6450181438957949755}
+  - component: {fileID: 180449132894199971}
+  - component: {fileID: 8967102536109566048}
+  m_Layer: 0
+  m_Name: PlayerDetectionBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6450181438957949755
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3621403390328359503}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5672757993265815879}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &180449132894199971
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3621403390328359503}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 400, y: 180, z: 1000}
+  m_Center: {x: 0, y: 90, z: 470}
+--- !u!114 &8967102536109566048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3621403390328359503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e4e1386037d3de408eea36e05cc59ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5008161989256018817
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,6 +71,7 @@ GameObject:
   - component: {fileID: 4756444632808084695}
   - component: {fileID: 972506466081257605}
   - component: {fileID: 5860670088604463430}
+  - component: {fileID: 3825539926122098879}
   m_Layer: 0
   m_Name: EnemyRobot
   m_TagString: Enemy
@@ -34,6 +93,7 @@ Transform:
   m_Children:
   - {fileID: 4121334053411407251}
   - {fileID: 9034538813397800548}
+  - {fileID: 6450181438957949755}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -74,6 +134,7 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 0
+  EnemyStartLocation: {x: 0, y: 0, z: 0}
 --- !u!65 &972506466081257605
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -103,6 +164,18 @@ MonoBehaviour:
   PlayerInAggroCollider: 0
   PlayerInSight: 0
   CollisionWithPlayer: 0
+--- !u!114 &3825539926122098879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5008161989256018817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 600f165db84fb7543a83d4fed1109243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8132653157586296993
 GameObject:
   m_ObjectHideFlags: 0

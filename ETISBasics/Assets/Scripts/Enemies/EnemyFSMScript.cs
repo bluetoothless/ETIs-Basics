@@ -8,11 +8,11 @@ public class EnemyFSMScript : MonoBehaviour
     [HideInInspector]
     public EnemyState CurrentState = EnemyState.Patrol;
     [HideInInspector]
-    public bool PlayerInAggroCollider = false;
+    public bool PlayerInAggroCollider;
     [HideInInspector]
-    public bool PlayerInSight = false;
+    public bool PlayerInSight;
     [HideInInspector]
-    public bool CollisionWithPlayer = false;
+    public bool CollisionWithPlayer;
 
     private float EnemyCooldownTime = 10;
     private float IdleStateTime = 0;
@@ -20,14 +20,25 @@ public class EnemyFSMScript : MonoBehaviour
     private float MinTimeInAlertState = 5;
     private float CurrentTimeInAlertState = 0;
 
+    private float MinTimeInChaseState = 5;
+    private float CurrentTimeInChaseState = 0;
+
     private void Start()
     {
-        PlayerInAggroCollider = true;
+        PlayerInAggroCollider = false;
+        PlayerInSight = false;
+        CollisionWithPlayer = false;
     }
 
     void FixedUpdate()
     {
         //change state if needed
+        if (CollisionWithPlayer)
+        {
+            CurrentState = EnemyState.Idle;
+            CollisionWithPlayer = false;
+            CurrentTimeInChaseState = 0;
+        }
         switch (CurrentState)
         {
             case EnemyState.Patrol:
@@ -59,18 +70,17 @@ public class EnemyFSMScript : MonoBehaviour
                 } 
                 break;
             case EnemyState.Chase:
-                if (CollisionWithPlayer)
+                if (CurrentTimeInChaseState < MinTimeInChaseState)
                 {
-                    CurrentState = EnemyState.Idle;
-                    CollisionWithPlayer = false;
-                }
-                else if (!PlayerInAggroCollider && !PlayerInSight)
-                {
-                    CurrentState = EnemyState.Patrol;
+                    CurrentTimeInChaseState += Time.deltaTime;
                 }
                 else if (PlayerInAggroCollider && !PlayerInSight)
                 {
                     CurrentState = EnemyState.Alert;
+                }
+                else if (!PlayerInAggroCollider && !PlayerInSight)
+                {
+                    CurrentState = EnemyState.Patrol;
                 }
                 break;
             case EnemyState.Idle:

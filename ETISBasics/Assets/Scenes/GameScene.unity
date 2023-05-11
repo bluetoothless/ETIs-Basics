@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: a7b5eea02c52fcb47a0f8f60898e5346, type: 2}
 --- !u!1 &308641
 GameObject:
   m_ObjectHideFlags: 0
@@ -922,7 +922,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 74761264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6323, y: 341.9, z: 8795}
+  m_LocalPosition: {x: -6256.9, y: 341.9, z: 8795}
   m_LocalScale: {x: 70, y: 80, z: 70}
   m_ConstrainProportionsScale: 0
   m_Children:

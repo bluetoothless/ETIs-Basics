@@ -74,7 +74,7 @@ public class EnemyMovementScript : MonoBehaviour
             case EnemyState.Idle:
                 return CalculateForIdleState();
         }
-        return new Vector3(0f, 0f, 0f);
+        return Vector3.zero;
     }
 
     Vector3 CalculateForPatrolState()
@@ -99,19 +99,18 @@ public class EnemyMovementScript : MonoBehaviour
     Vector3 CalculateForAlertState()
     {
         RotateForAlertState();
-        return new Vector3(0f, 0f, 0f);
+        return Vector3.zero;
     }
 
     Vector3 CalculateForChaseState()
     {
-        Vector3 movementVector = new Vector3(x, 0f, z);
+        Vector3 movementVector = Vector3.zero;
         return movementVector;
     }
 
     Vector3 CalculateForIdleState()
     {
-        Vector3 movementVector = new Vector3(x, 0f, z);
-        return movementVector;
+        return Vector3.zero;
     }
 
     void RotateForAlertState()
