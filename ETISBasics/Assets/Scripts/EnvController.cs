@@ -21,8 +21,10 @@ namespace EnvControllerNamespace
         public static bool PlayerInvulnerable = false;
 
         // ------------ SETTINGS ------------ //
+        public static float PlayerSpeed = 600f;
         public static int NumberOfEnemies = 15;
-        public static float EnemySpeed = 100;
+        public static float EnemySpeed = 100f;
+        public static float EnemySpeedUpStep = 72f;
         public static float EnemyChaseDistance = 1000f;
         public static float InvulnerabilityTime = 10f;
         public static float MouseSensitivity = 500f;

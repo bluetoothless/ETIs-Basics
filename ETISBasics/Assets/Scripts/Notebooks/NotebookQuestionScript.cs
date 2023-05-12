@@ -13,7 +13,6 @@ public class NotebookQuestionScript : MonoBehaviour
     public GameObject[] NotebookQuestionPanel;
     public int whichQuestion = 0;
 
-
     public void ManageNotebookCollision()
     {
         Cursor.lockState = CursorLockMode.None;
@@ -26,12 +25,11 @@ public class NotebookQuestionScript : MonoBehaviour
         EnvController.GamePaused = true;
     }
 
-
     public void OnWrongAnswer()
     {
         WrongAnswer.SetActive(true);
+        EnvController.EnemySpeed += EnvController.EnemySpeedUpStep;
     }
-
 
     public void OnCorrectAnswer()
     {

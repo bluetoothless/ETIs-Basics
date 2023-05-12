@@ -6,10 +6,7 @@ using EnvControllerNamespace;
 public class PlayerMovementScript : MonoBehaviour
 {
     public CharacterController controller;
-
-    public float speed;
     public float gravity;
-
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
@@ -38,7 +35,7 @@ public class PlayerMovementScript : MonoBehaviour
 
             Vector3 movementVector = transform.right * x + transform.forward * z;
 
-            controller.Move(movementVector * speed * Time.deltaTime);
+            controller.Move(movementVector * EnvController.PlayerSpeed * Time.deltaTime);
             velocity.y += gravity * Time.deltaTime;
             controller.Move(velocity * Time.deltaTime);
         }
