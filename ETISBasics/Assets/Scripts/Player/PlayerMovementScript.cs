@@ -17,6 +17,11 @@ public class PlayerMovementScript : MonoBehaviour
     Vector3 velocity;
     bool isGounded;
 
+    private void FixedUpdate()
+    {
+        EnvController.PlayerCurrentPosition = gameObject.transform.position;
+    }
+
     void Update()
     {
         if (!EnvController.GamePaused)

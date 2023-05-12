@@ -104,8 +104,7 @@ public class EnemyMovementScript : MonoBehaviour
 
     Vector3 CalculateForChaseState()
     {
-        Vector3 movementVector = Vector3.zero;
-        return movementVector;
+        return EnvController.PlayerCurrentPosition - gameObject.transform.position;
     }
 
     Vector3 CalculateForIdleState()

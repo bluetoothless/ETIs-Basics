@@ -14,6 +14,7 @@ public class LifeLosingScript : MonoBehaviour
         {
             EnvController.LivesLeft--;
             HeartsTaken[EnvController.LivesLeft].SetActive(true);
+            EnvController.PlayerInvulnerable = true;
 
             if (EnvController.LivesLeft == 0)
             {

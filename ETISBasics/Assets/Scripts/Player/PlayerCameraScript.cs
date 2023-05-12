@@ -5,7 +5,6 @@ using EnvControllerNamespace;
 
 public class PlayerCameraScript : MonoBehaviour
 {
-    public float mouseSensitivity = 100f;
     public Transform playerObject;
     float xRotation = 0f;
 
@@ -18,8 +17,8 @@ public class PlayerCameraScript : MonoBehaviour
     {
         if (!EnvController.GamePaused) 
         { 
-            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-            float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+            float mouseX = Input.GetAxis("Mouse X") * EnvController.MouseSensitivity * Time.deltaTime;
+            float mouseY = Input.GetAxis("Mouse Y") * EnvController.MouseSensitivity * Time.deltaTime;
 
             xRotation -= mouseY;
             xRotation = Mathf.Clamp(xRotation, -90f, 90f);

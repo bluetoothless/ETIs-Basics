@@ -13,16 +13,19 @@ namespace EnvControllerNamespace
         public static GameObject[] Coins;
         public static Vector3[] NotebookLocations;
         public static Vector3[] CoinLocations;
+        public static Vector3 PlayerCurrentPosition;
 
         public static int NumberOfPosessedNotebooks = 0;
         public static int NumberOfPosessedCoins = 0;
         public static int LivesLeft = 3;
         public static bool GamePaused = false;
+        public static bool PlayerInvulnerable = false;
 
         public static int NumberOfEnemies = 15;
         public static GameObject[] Enemies;
         public static float EnemySpeed = 100;
 
+        public static float MouseSensitivity = 500f;
 
         public static void EndTheGame(bool win)
         {

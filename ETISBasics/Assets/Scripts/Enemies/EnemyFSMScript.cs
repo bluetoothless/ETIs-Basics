@@ -6,7 +6,7 @@ using EnvControllerNamespace;
 public class EnemyFSMScript : MonoBehaviour
 {
     [HideInInspector]
-    public EnemyState CurrentState = EnemyState.Patrol;
+    public EnemyState CurrentState;
     [HideInInspector]
     public bool PlayerInAggroCollider;
     [HideInInspector]
@@ -20,11 +20,12 @@ public class EnemyFSMScript : MonoBehaviour
     private float MinTimeInAlertState = 5;
     private float CurrentTimeInAlertState = 0;
 
-    private float MinTimeInChaseState = 5;
-    private float CurrentTimeInChaseState = 0;
+    private float DistanceFromPlayer;
+    private float ChaseDistance = 1000f;
 
     private void Start()
     {
+        CurrentState = EnemyState.Patrol;
         PlayerInAggroCollider = false;
         PlayerInSight = false;
         CollisionWithPlayer = false;
@@ -32,12 +33,13 @@ public class EnemyFSMScript : MonoBehaviour
 
     void FixedUpdate()
     {
+        DistanceFromPlayer = Vector3.Distance(EnvController.PlayerCurrentPosition, gameObject.transform.position);
+
         //change state if needed
         if (CollisionWithPlayer)
         {
             CurrentState = EnemyState.Idle;
             CollisionWithPlayer = false;
-            CurrentTimeInChaseState = 0;
         }
         switch (CurrentState)
         {
@@ -52,7 +54,7 @@ public class EnemyFSMScript : MonoBehaviour
                 }
                 break;
             case EnemyState.Alert:
-                if (PlayerInAggroCollider && PlayerInSight)
+                if (PlayerInSight)
                 {
                     CurrentState = EnemyState.Chase;
                 }
@@ -70,17 +72,16 @@ public class EnemyFSMScript : MonoBehaviour
                 } 
                 break;
             case EnemyState.Chase:
-                if (CurrentTimeInChaseState < MinTimeInChaseState)
+                if (DistanceFromPlayer > ChaseDistance)
                 {
-                    CurrentTimeInChaseState += Time.deltaTime;
-                }
-                else if (PlayerInAggroCollider && !PlayerInSight)
-                {
-                    CurrentState = EnemyState.Alert;
-                }
-                else if (!PlayerInAggroCollider && !PlayerInSight)
-                {
-                    CurrentState = EnemyState.Patrol;
+                    if (PlayerInAggroCollider && !PlayerInSight)
+                    {
+                        CurrentState = EnemyState.Alert;
+                    }
+                    else if (!PlayerInAggroCollider && !PlayerInSight)
+                    {
+                        CurrentState = EnemyState.Patrol;
+                    }
                 }
                 break;
             case EnemyState.Idle:
@@ -92,6 +93,7 @@ public class EnemyFSMScript : MonoBehaviour
                 {
                     CurrentState = EnemyState.Patrol;
                     IdleStateTime = 0;
+                    EnvController.PlayerInvulnerable = false;
                 }
                 break;
         }
