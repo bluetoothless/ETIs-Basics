@@ -14,14 +14,11 @@ public class EnemyFSMScript : MonoBehaviour
     [HideInInspector]
     public bool CollisionWithPlayer;
 
-    private float EnemyCooldownTime = 10;
     private float IdleStateTime = 0;
-
+    private float DistanceFromPlayer;
     private float MinTimeInAlertState = 5;
     private float CurrentTimeInAlertState = 0;
 
-    private float DistanceFromPlayer;
-    private float ChaseDistance = 1000f;
 
     private void Start()
     {
@@ -72,7 +69,7 @@ public class EnemyFSMScript : MonoBehaviour
                 } 
                 break;
             case EnemyState.Chase:
-                if (DistanceFromPlayer > ChaseDistance)
+                if (DistanceFromPlayer > EnvController.EnemyChaseDistance)
                 {
                     if (PlayerInAggroCollider && !PlayerInSight)
                     {
@@ -85,7 +82,7 @@ public class EnemyFSMScript : MonoBehaviour
                 }
                 break;
             case EnemyState.Idle:
-                if (IdleStateTime < EnemyCooldownTime)
+                if (IdleStateTime < EnvController.InvulnerabilityTime)
                 {
                     IdleStateTime += Time.deltaTime;
                 }
