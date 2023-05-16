@@ -54,4 +54,11 @@ namespace EnvControllerNamespace
         Chase,
         Idle
     }
+
+    public enum Difficulty
+    {
+        Easy,
+        Normal,
+        Hard
+    }
 }

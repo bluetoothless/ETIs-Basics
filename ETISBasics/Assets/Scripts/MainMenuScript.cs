@@ -28,8 +28,8 @@ public class MainMenuScript : MonoBehaviour
 
     public void OnQuit()
     {
-        UnityEditor.EditorApplication.isPlaying = false;
-        //Application.Quit();
+        //UnityEditor.EditorApplication.isPlaying = false;
+        Application.Quit();
     }
 
 }
