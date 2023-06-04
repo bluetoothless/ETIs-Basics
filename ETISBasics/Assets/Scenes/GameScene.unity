@@ -19148,7 +19148,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "2. Co m\xF3wi napis w zapisie binarnym na \njednym z budynk\xF3w ETI?"
+  m_text: "2. Co m\xF3wi napis w zapisie binarnym na jednym z budynk\xF3w ETI?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19544,7 +19544,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "4. Kt\xF3re pi\u0119tra budynk\xF3w Nowego i Starego \n    ETI \u0142\u0105czy
+  m_text: "4. Kt\xF3re pi\u0119tra budynk\xF3w Nowego i Starego ETI \u0142\u0105czy
     ze sob\u0105 \u0142\u0105cznik?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -22339,7 +22339,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: 340}
+  m_AnchoredPosition: {x: -300, y: 373}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2088230517
@@ -22362,7 +22362,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "7. Ile automat\xF3w znajduje si\u0119 na parterze\n    Starego ETI w pobli\u017Cu
+  m_text: "7. Ile automat\xF3w znajduje si\u0119 na parterze Starego ETI w pobli\u017Cu
     audytorium Kowalskiego?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
