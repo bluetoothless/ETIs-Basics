@@ -8,12 +8,15 @@ public class MainMenuScript : MonoBehaviour
 {
     public Button Options;
     public Button Quit;
+    public Button BackToMenu;
+    public GameObject OptionsPanel;
 
     private void Start()
     {
         Cursor.lockState = CursorLockMode.None;
         Options.onClick.AddListener(OnOptions);
         Quit.onClick.AddListener(OnQuit);
+        BackToMenu.onClick.AddListener(OnBackToMenu);
     }
 
     public void OnPlay(string scena)
@@ -23,8 +26,14 @@ public class MainMenuScript : MonoBehaviour
 
     private void OnOptions()
     {
-        Debug.Log("Opcje");
+        OptionsPanel.SetActive(true);
     }
+
+    private void OnBackToMenu()
+    {
+        OptionsPanel.SetActive(false);
+    }
+
 
     public void OnQuit()
     {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -583,7 +583,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &33164257
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5697,6 +5697,7 @@ GameObject:
   - component: {fileID: 491685880}
   - component: {fileID: 491685879}
   - component: {fileID: 491685881}
+  - component: {fileID: 491685882}
   m_Layer: 5
   m_Name: Podpowiedz
   m_TagString: Untagged
@@ -5744,7 +5745,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 02ce450185fb06f4faf7d2a1192b67cc, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5818,6 +5819,22 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &491685882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491685877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191849094a96cd44a97cbf155715b6c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NotebookQuestionPanel: {fileID: 27051495}
+  Podpowiedz: {fileID: 491685881}
+  GreyImage: {fileID: 21300000, guid: 6d032c70f470dea4c9df54524daac345, type: 3}
+  ColorImage: {fileID: 21300000, guid: 02ce450185fb06f4faf7d2a1192b67cc, type: 3}
 --- !u!1 &495833736
 GameObject:
   m_ObjectHideFlags: 0
@@ -10226,6 +10243,7 @@ GameObject:
   - component: {fileID: 958369302}
   - component: {fileID: 958369301}
   - component: {fileID: 958369300}
+  - component: {fileID: 958369303}
   m_Layer: 5
   m_Name: Podpowiedz
   m_TagString: Untagged
@@ -10329,7 +10347,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 02ce450185fb06f4faf7d2a1192b67cc, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10347,6 +10365,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 958369298}
   m_CullTransparentMesh: 1
+--- !u!114 &958369303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958369298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191849094a96cd44a97cbf155715b6c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NotebookQuestionPanel: {fileID: 921606489}
+  Podpowiedz: {fileID: 958369300}
+  GreyImage: {fileID: 21300000, guid: 6d032c70f470dea4c9df54524daac345, type: 3}
+  ColorImage: {fileID: 21300000, guid: 02ce450185fb06f4faf7d2a1192b67cc, type: 3}
 --- !u!1 &959462068
 GameObject:
   m_ObjectHideFlags: 0
@@ -11460,7 +11494,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1104199572
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12386,7 +12420,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1179529715
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13048,7 +13082,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1279328570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15075,7 +15109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1456506402
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16093,7 +16127,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1502218356
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16928,6 +16962,7 @@ GameObject:
   - component: {fileID: 1575993971}
   - component: {fileID: 1575993970}
   - component: {fileID: 1575993969}
+  - component: {fileID: 1575993972}
   m_Layer: 5
   m_Name: Podpowiedz
   m_TagString: Untagged
@@ -17031,7 +17066,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 02ce450185fb06f4faf7d2a1192b67cc, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17049,6 +17084,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1575993967}
   m_CullTransparentMesh: 1
+--- !u!114 &1575993972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575993967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191849094a96cd44a97cbf155715b6c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NotebookQuestionPanel: {fileID: 1147130210}
+  Podpowiedz: {fileID: 1575993969}
+  GreyImage: {fileID: 21300000, guid: 6d032c70f470dea4c9df54524daac345, type: 3}
+  ColorImage: {fileID: 21300000, guid: 02ce450185fb06f4faf7d2a1192b67cc, type: 3}
 --- !u!1 &1577338189
 GameObject:
   m_ObjectHideFlags: 0
@@ -17061,6 +17112,7 @@ GameObject:
   - component: {fileID: 1577338193}
   - component: {fileID: 1577338192}
   - component: {fileID: 1577338191}
+  - component: {fileID: 1577338194}
   m_Layer: 5
   m_Name: Podpowiedz
   m_TagString: Untagged
@@ -17164,7 +17216,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 02ce450185fb06f4faf7d2a1192b67cc, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17182,6 +17234,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1577338189}
   m_CullTransparentMesh: 1
+--- !u!114 &1577338194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577338189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191849094a96cd44a97cbf155715b6c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NotebookQuestionPanel: {fileID: 202509021}
+  Podpowiedz: {fileID: 1577338191}
+  GreyImage: {fileID: 21300000, guid: 6d032c70f470dea4c9df54524daac345, type: 3}
+  ColorImage: {fileID: 21300000, guid: 02ce450185fb06f4faf7d2a1192b67cc, type: 3}
 --- !u!1 &1579174328
 GameObject:
   m_ObjectHideFlags: 0
@@ -17474,7 +17542,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1589015975
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18884,6 +18952,7 @@ GameObject:
   - component: {fileID: 1729225206}
   - component: {fileID: 1729225205}
   - component: {fileID: 1729225204}
+  - component: {fileID: 1729225207}
   m_Layer: 5
   m_Name: Podpowiedz
   m_TagString: Untagged
@@ -18987,7 +19056,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 02ce450185fb06f4faf7d2a1192b67cc, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19005,6 +19074,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1729225202}
   m_CullTransparentMesh: 1
+--- !u!114 &1729225207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729225202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191849094a96cd44a97cbf155715b6c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NotebookQuestionPanel: {fileID: 871933631}
+  Podpowiedz: {fileID: 1729225204}
+  GreyImage: {fileID: 21300000, guid: 6d032c70f470dea4c9df54524daac345, type: 3}
+  ColorImage: {fileID: 21300000, guid: 02ce450185fb06f4faf7d2a1192b67cc, type: 3}
 --- !u!1 &1752732991
 GameObject:
   m_ObjectHideFlags: 0
@@ -19586,7 +19671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1797608232
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19774,7 +19859,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 52d8691bdd696d04788399ac9126e742, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1549974917099175285, guid: 52d8691bdd696d04788399ac9126e742, type: 3}
       propertyPath: m_Layer
@@ -20222,6 +20307,7 @@ GameObject:
   - component: {fileID: 1864526801}
   - component: {fileID: 1864526800}
   - component: {fileID: 1864526799}
+  - component: {fileID: 1864526802}
   m_Layer: 5
   m_Name: Podpowiedz
   m_TagString: Untagged
@@ -20325,7 +20411,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 02ce450185fb06f4faf7d2a1192b67cc, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20343,6 +20429,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864526797}
   m_CullTransparentMesh: 1
+--- !u!114 &1864526802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864526797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191849094a96cd44a97cbf155715b6c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NotebookQuestionPanel: {fileID: 191301826}
+  Podpowiedz: {fileID: 1864526799}
+  GreyImage: {fileID: 21300000, guid: 6d032c70f470dea4c9df54524daac345, type: 3}
+  ColorImage: {fileID: 21300000, guid: 02ce450185fb06f4faf7d2a1192b67cc, type: 3}
 --- !u!1 &1872530471
 GameObject:
   m_ObjectHideFlags: 0
@@ -20728,6 +20830,7 @@ GameObject:
   - component: {fileID: 1944298728}
   - component: {fileID: 1944298727}
   - component: {fileID: 1944298726}
+  - component: {fileID: 1944298729}
   m_Layer: 5
   m_Name: Podpowiedz
   m_TagString: Untagged
@@ -20831,7 +20934,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 02ce450185fb06f4faf7d2a1192b67cc, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -20849,6 +20952,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1944298724}
   m_CullTransparentMesh: 1
+--- !u!114 &1944298729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944298724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 191849094a96cd44a97cbf155715b6c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NotebookQuestionPanel: {fileID: 817864272}
+  Podpowiedz: {fileID: 1944298726}
+  GreyImage: {fileID: 21300000, guid: 6d032c70f470dea4c9df54524daac345, type: 3}
+  ColorImage: {fileID: 21300000, guid: 02ce450185fb06f4faf7d2a1192b67cc, type: 3}
 --- !u!1 &1952540896
 GameObject:
   m_ObjectHideFlags: 0
@@ -21682,7 +21801,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2039892305
 RectTransform:
   m_ObjectHideFlags: 0
