@@ -7,6 +7,7 @@ using EnvControllerNamespace;
 public class LifeLosingScript : MonoBehaviour
 {
     public GameObject[] HeartsTaken;
+    public GameObject GameOverPanel;
 
     void OnTriggerEnter(Collider collider)
     {
@@ -19,6 +20,8 @@ public class LifeLosingScript : MonoBehaviour
             if (EnvController.LivesLeft == 0)
             {
                 EnvController.EndTheGame(false);
+                Cursor.lockState = CursorLockMode.None;
+                GameOverPanel.SetActive(true);
             }
         }
     }

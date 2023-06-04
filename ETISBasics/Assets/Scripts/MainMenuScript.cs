@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using EnvControllerNamespace;
 
 public class MainMenuScript : MonoBehaviour
 {
@@ -17,10 +18,15 @@ public class MainMenuScript : MonoBehaviour
         Options.onClick.AddListener(OnOptions);
         Quit.onClick.AddListener(OnQuit);
         BackToMenu.onClick.AddListener(OnBackToMenu);
+        EnvController.LivesLeft = 3;
+        EnvController.NumberOfPosessedCoins = 0;
+        EnvController.NumberOfPosessedNotebooks = 0;
+
     }
 
     public void OnPlay(string scena)
     {
+        EnvController.GamePaused = false;
         SceneManager.LoadScene(scena);
     }
 
