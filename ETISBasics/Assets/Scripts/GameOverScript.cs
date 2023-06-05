@@ -14,6 +14,7 @@ public class GameOverScript : MonoBehaviour
     void Start()
     {
         ExitGame.onClick.AddListener(OnQuit);
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void OnRestartGame(string scena)

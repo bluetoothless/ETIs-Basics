@@ -20,7 +20,6 @@ public class LifeLosingScript : MonoBehaviour
             if (EnvController.LivesLeft == 0)
             {
                 EnvController.EndTheGame(false);
-                Cursor.lockState = CursorLockMode.None;
                 GameOverPanel.SetActive(true);
             }
         }

@@ -7,6 +7,7 @@ using EnvControllerNamespace;
 
 public class NotebookQuestionScript : MonoBehaviour
 {
+    public GameObject GameSucceedPanel;
     public GameObject GamePanel;
     public GameObject WrongAnswer;
     public Button ButtonBackToQuestion;
@@ -33,12 +34,16 @@ public class NotebookQuestionScript : MonoBehaviour
 
     public void OnCorrectAnswer()
     {
+        if(EnvController.NumberOfPosessedNotebooks == 7)
+            GameSucceedPanel.SetActive(true);
+        else
+        {
+            for (int i = 0; i < NotebookQuestionPanel.Length; i++)
+                NotebookQuestionPanel[i].SetActive(false);
 
-        for (int i = 0; i < NotebookQuestionPanel.Length; i++)
-            NotebookQuestionPanel[i].SetActive(false);
-        
-        GamePanel.SetActive(true);
-        EnvController.GamePaused = false;
-        Cursor.lockState = CursorLockMode.Locked;
+            GamePanel.SetActive(true);
+            EnvController.GamePaused = false;
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 }
