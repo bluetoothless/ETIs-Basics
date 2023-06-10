@@ -2799,7 +2799,7 @@ GameObject:
   - component: {fileID: 1602654534}
   - component: {fileID: 1602654533}
   - component: {fileID: 1602654532}
-  - component: {fileID: 1602654531}
+  - component: {fileID: 1602654535}
   m_Layer: 5
   m_Name: OptionsPanel
   m_TagString: Untagged
@@ -2807,20 +2807,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1602654531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1602654530}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2dc094826a24864b81959b8f71ff538, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MouseSensitivitySlider: {fileID: 1273842175}
-  DifficultySlider: {fileID: 934758639}
 --- !u!114 &1602654532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2884,6 +2870,20 @@ RectTransform:
   m_AnchoredPosition: {x: -2, y: 0}
   m_SizeDelta: {x: 1600, y: 900.3086}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1602654535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602654530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad6ff61456330354f8e721e3859d4e32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MouseSensitivitySlider: {fileID: 1273842175}
+  DifficultySlider: {fileID: 934758639}
 --- !u!1 &1612758401
 GameObject:
   m_ObjectHideFlags: 0

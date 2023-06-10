@@ -11,7 +11,32 @@ public class UpdateOptionsScript : MonoBehaviour
 
     void Start()
     {
-        MouseSensitivitySlider.value = EnvController.MouseSensitivity;
+        var mouseSensitivity = PlayerPrefs.GetFloat("mouseSensitivity");
+        var difficulty = PlayerPrefs.GetInt("difficulty");
+        if (mouseSensitivity > 0f)
+        {
+            EnvController.MouseSensitivity = mouseSensitivity;
+            PlayerPrefs.SetFloat("mouseSensitivity", 0f);
+        }
+        else
+            MouseSensitivitySlider.value = EnvController.MouseSensitivity;
+
+        if (difficulty > -1)
+        {
+            switch (difficulty)
+            {
+                case (int)Difficulty.Easy:
+                    SetDifficultyToEasy();
+                    break;
+                case (int)Difficulty.Normal:
+                    SetDifficultyToNormal();
+                    break;
+                case (int)Difficulty.Hard:
+                    SetDifficultyToHard();
+                    break;
+            }
+            PlayerPrefs.SetInt("difficulty", -1);
+        }
     }
 
     void Update()
