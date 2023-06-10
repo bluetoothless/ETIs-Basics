@@ -13,7 +13,7 @@ public class UpdateOptionsScriptMenu : MonoBehaviour
     {
         MouseSensitivitySlider.value = EnvController.MouseSensitivity;
         PlayerPrefs.SetFloat("mouseSensitivity", 0f);
-        PlayerPrefs.SetInt("difficulty", -1);
+        PlayerPrefs.SetInt("difficulty", 3);
     }
 
     void Update()

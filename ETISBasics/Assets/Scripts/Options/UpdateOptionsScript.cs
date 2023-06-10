@@ -1,12 +1,14 @@
 using EnvControllerNamespace;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class UpdateOptionsScript : MonoBehaviour
 {
     public Slider MouseSensitivitySlider;
+    public TextMeshProUGUI sliderValue;
     public Slider DifficultySlider;
 
     void Start()
@@ -18,10 +20,7 @@ public class UpdateOptionsScript : MonoBehaviour
             EnvController.MouseSensitivity = mouseSensitivity;
             PlayerPrefs.SetFloat("mouseSensitivity", 0f);
         }
-        else
-            MouseSensitivitySlider.value = EnvController.MouseSensitivity;
-
-        if (difficulty > -1)
+        if (difficulty < 3)
         {
             switch (difficulty)
             {
@@ -35,8 +34,12 @@ public class UpdateOptionsScript : MonoBehaviour
                     SetDifficultyToHard();
                     break;
             }
-            PlayerPrefs.SetInt("difficulty", -1);
+            PlayerPrefs.SetInt("difficulty", 3);
+            DifficultySlider.value = difficulty;
         }
+
+        MouseSensitivitySlider.value = EnvController.MouseSensitivity;
+        sliderValue.text = EnvController.MouseSensitivity.ToString("0");
     }
 
     void Update()
